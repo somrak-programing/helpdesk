@@ -20,9 +20,10 @@
             <li class="nav-item active">
               <a class="nav-link" href="<?= site_url('');?>">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://devbanban.com/?p=2867" target="_blank">คอร์สออนไลน์สอน CodeIgniter</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="<?= site_url('form/allcase'); ?>">ติดตามงาน</a>
             </li>
+           
             <li class="nav-item active">
               <a class="nav-link" href="<?= site_url('login');?>">Login</a>
             </li>

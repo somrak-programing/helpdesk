@@ -112,9 +112,8 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
            <li><a href="<?= site_url('jobs');?>"><i class="fa fa-home"></i> <span>HOME</span></a></li>
-           
-           <!-- New li from Version 0.6-->
            <li><a href="<?= site_url('jobs');?>"><i class="fa fa-home"></i> <span>Jobs</span></a></li>
+           <li><a href="<?= site_url('report');?>"><i class="fa fa-home"></i> <span>Report</span></a></li>
            <li><a href="<?= site_url('admin');?>"><i class="fa fa-home"></i> <span>Admin</span></a></li>
            <!-- <li><a href="https://devbanban.com/?p=2867" target="_blank"><i class="fa fa-globe"></i> <span>สอน CodeIgniter</span></a></li> -->
           <li><a href="<?= site_url('login/logout');?>" onclick="return confirm('do you want to logout ?');"><i class="fa fa-edit"></i> <span>Logout</span></a></li>

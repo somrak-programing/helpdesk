@@ -64,5 +64,92 @@ class Data_model extends CI_Model {
                 $query=$this->db->update('tbl_case',$data);
         }
 
+        //count by status 1
+        public function status1()
+        {
+                $this->db->select('case_status, COUNT(id) AS totalstatus1');
+                $this->db->from('tbl_case');
+                $this->db->where('case_status',1);
+                $query = $this->db->get();
+                if($query->num_rows() > 0){
+                        $data = $query->row();
+                        return $data;
+                }
+                return FALSE;
+        }
+
+        //count by status 2
+        public function status2()
+        {
+                $this->db->select('case_status, COUNT(id) AS totalstatus2');
+                $this->db->from('tbl_case');
+                $this->db->where('case_status',2);
+                $query = $this->db->get();
+                if($query->num_rows() > 0){
+                        $data = $query->row();
+                        return $data;
+                }
+                return FALSE;
+        }
+
+
+        //count by status 3
+        public function status3()
+        {
+                $this->db->select('case_status, COUNT(id) AS totalstatus3');
+                $this->db->from('tbl_case');
+                $this->db->where('case_status',3);
+                $query = $this->db->get();
+                if($query->num_rows() > 0){
+                        $data = $query->row();
+                        return $data;
+                }
+                return FALSE;
+        }
+
+
+        //count by status 4
+        public function status4()
+        {
+                $this->db->select('case_status, COUNT(id) AS totalstatus4');
+                $this->db->from('tbl_case');
+                $this->db->where('case_status',4);
+                $query = $this->db->get();
+                if($query->num_rows() > 0){
+                        $data = $query->row();
+                        return $data;
+                }
+                return FALSE;
+        }
+
+      //query by status  
+      // *function นี้ลืมพูดถึง เอาไปใส่ใน data_model ด้วยนะครับ เอาไว้สำหรับ query ข้อมูลแยกตามสถานะ ถูกเรียกใช้งานกับ Jobs/bystatus
+        public function by_status($status_id)
+        {
+            $this->db->where('case_status',$status_id);
+            $query = $this->db->get('tbl_case');
+            return $query->result();
+        }
+
+        //query count by case_type
+        public function countbycasetype()
+        {
+            $this->db->select('case_type, COUNT(id) as casetotal');
+            $this->db->group_by('case_type');
+            $this->db->order_by('casetotal','desc');
+            $query = $this->db->get('tbl_case');
+            return $query->result();
+        }     
+
+//query count by status
+        public function countbycasestatus()
+        {
+            $this->db->select('case_status, COUNT(id) as statustotal');
+            $this->db->group_by('case_status');
+            $this->db->order_by('statustotal','desc');
+            $query = $this->db->get('tbl_case');
+            return $query->result();
+        }
+
 
 }

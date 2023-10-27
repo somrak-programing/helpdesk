@@ -40,7 +40,7 @@ class Login extends CI_Controller {
 				$admin_status = $_SESSION['admin_status'];
 				if($admin_status==1){
 					//echo 'r u admin';
-					redirect('admin','refresh');
+					redirect('jobs','refresh');
 				}else{
 					//u not admin
 					$this->session->set_flashdata('login_error', TRUE);
