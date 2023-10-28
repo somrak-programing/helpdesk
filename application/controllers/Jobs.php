@@ -78,10 +78,31 @@ class Jobs extends CI_Controller {
 		$data['qstatus2']=$this->data_model->status2();
 		$data['qstatus3']=$this->data_model->status3();
 		$data['qstatus4']=$this->data_model->status4();
+
+		//print_r($data);
+		//exit;
 		$this->load->view('template/header');
 		$this->load->view('backend/jobs_list',$data);
 		$this->load->view('template/footer');
 	}
 
+	public function bycasetype()
+	{
+		//ประกาศตัวแปรรับค่า get
+		$case_type = $this->input->get('case_type');
 
-}
+		//echo $case_type;
+
+		$data['query']=$this->data_model->by_case_type($case_type);
+		
+		// echo '<pre>';
+		// print_r($data);
+		// echo '</pre>';
+		// exit;
+
+		$this->load->view('template/header');
+		$this->load->view('backend/case_type_list',$data);
+		$this->load->view('template/footer');
+	}
+
+	}

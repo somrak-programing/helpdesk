@@ -21,7 +21,7 @@
                 <br><br>
 
 
-                <h3 class="box-title">ตารางข้อมูล</h3>
+                <h3 class="box-title">ตารางข้อมูล :: <font color="red"> <?= $this->input->get('status'); ?> </font> </h3>
             </div><!-- /.box-header -->
             <div class="box-body">
                 <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">

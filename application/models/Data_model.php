@@ -131,6 +131,14 @@ class Data_model extends CI_Model {
             return $query->result();
         }
 
+        //query by case_type 
+        public function by_case_type($case_type)
+        {
+            $this->db->where('case_type',$case_type);
+            $query = $this->db->get('tbl_case');
+            return $query->result();
+        }
+
         //query count by case_type
         public function countbycasetype()
         {

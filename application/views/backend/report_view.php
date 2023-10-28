@@ -60,7 +60,7 @@
                                         <td align="center"><?= $rsr->casetotal;?></td>
                                         <td align="center">
                                             
-                                        <a href="<?php echo site_url('jobs/bycasetype/'); ?>?case_type=<?= $rsr->case_type;?>" class="btn btn-info btn-xs"> view </a></td>
+                                        <a href="<?php echo site_url('jobs/bycasetype/'); ?>?case_type=<?= $rsr->case_type;?>" class="btn btn-info btn-xs" target="_blank"> view </a></td>
                                     </tr>
                                     <?php  } ?>
                                 </tbody>
