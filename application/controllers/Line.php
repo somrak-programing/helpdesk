@@ -21,7 +21,4 @@ class Line extends CI_Controller {
 		$this->load->view('line_view');
 	}
 
-
-
-
 }
